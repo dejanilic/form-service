@@ -1,0 +1,108 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-forms-table
+      author: dejan.ilic@mozzartbet.com
+
+      changes:
+        comment: Forms table
+        strip-comments: true
+        sql:
+
+          create table forms (
+            id int,
+            title varchar(256),
+            createdOn timestamp,
+            modifiedOn timestamp,
+            primary key (id)
+          );
+
+  - changeSet:
+      id: create-formscompleted-table
+      author: dejan.ilic@mozzartbet.com
+
+      changes:
+        comment: Formscompleted table
+        strip-comments: true
+        sql:
+
+          create table formscompleted (
+            id int,
+            form_id int,
+            createdOn timestamp,
+            modifiedOn timestamp,
+            primary key (id)
+          );
+
+  - changeSet:
+      id: create-users-table
+      author: dejan.ilic@mozzartbet.com
+
+      changes:
+          comment: Users table
+          strip-comments: true
+          sql:
+
+            create table users (
+              id int,
+              username varchar(256),
+              password varchar(256),
+              createdOn timestamp,
+              modifiedOn timestamp,
+              primary key (id)
+            );
+
+  - changeSet:
+      id: create-fields-table
+      author: dejan.ilic@mozzartbet.com
+
+      changes:
+        comment: Fields table
+        strip-comments: true
+        sql:
+
+          create table fields (
+            id int,
+            form_id int,
+            title varchar(256),
+            orderNumber int,
+            type enum('TEXT', 'NUMBER'),
+            createdOn timestamp,
+            modifiedOn timestamp,
+            primary key (id)
+          );
+
+  - changeSet:
+      id: create-fieldscompleted-table
+      author: dejan.ilic@mozzartbet.com
+
+      changes:
+        comment: Fieldscompleted table
+        strip-comments: true
+        sql:
+
+          create table fieldscompleted (
+            id int,
+            formcompleted_id int,
+            field_id int,
+            valueText varchar(256),
+            valueNumber double,
+            createdOn timestamp,
+            modifiedOn timestamp,
+            primary key (id)
+          );
+
+  - changeSet:
+      id: create-statistics-table
+      author: dejan.ilic@mozzartbet.com
+
+      changes:
+        comment: Statistics table
+        strip-comments: true
+        sql:
+
+          create table statistics (
+            id int,
+            date date,
+            formsCompletedNumber int,
+            primary key (id)
+          );

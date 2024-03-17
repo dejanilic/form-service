@@ -24,8 +24,8 @@ public class Field {
 
     private FieldType type;
 
-    private Timestamp dateCreated;
+    private Timestamp createdOn;
 
-    private Timestamp dateLastModified;
+    private Timestamp modifiedOn;
 
 }

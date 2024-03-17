@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heliant.formservice.dao.FieldMapper">
+
+    <resultMap type="Field" id="field">
+        <result property="id" column="id" />
+        <result property="formId" column="form_id" />
+        <result property="title" column="title" />
+        <result property="orderNumber" column="orderNumber" />
+        <result property="type" column="type" />
+        <result property="createdOn" column="createdOn" />
+        <result property="modifiedOn" column="modifiedOn" />
+    </resultMap>
+
+    <select id="getAllFields" resultMap="field">
+        select * from fields;
+    </select>
+
+</mapper>

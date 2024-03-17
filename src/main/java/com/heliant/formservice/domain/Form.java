@@ -13,8 +13,8 @@ public class Form {
 
     private String title;
 
-    private Timestamp dateCreated;
+    private Timestamp createdOn;
 
-    private Timestamp dateLastModified;
+    private Timestamp modifiedOn;
 
 }

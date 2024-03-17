@@ -15,8 +15,8 @@ public class User {
 
     private String password;
 
-    private Timestamp dateCreated;
+    private Timestamp createdOn;
 
-    private Timestamp dateLastModified;
+    private Timestamp modifiedOn;
 
 }

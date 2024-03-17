@@ -19,8 +19,8 @@ public class FieldCompleted {
 
     private Double valueNumber;
 
-    private Timestamp dateCreated;
+    private Timestamp createdOn;
 
-    private Timestamp dateLastModified;
+    private Timestamp modifiedOn;
 
 }

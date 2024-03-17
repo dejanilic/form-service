@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="jdbcTypeForNull" value="NULL" />
+        <setting name="logImpl" value="SLF4J"/>
+    </settings>
+
+    <typeAliases>
+        <package name="com.heliant.formservice.domain" />
+    </typeAliases>
+
+    <typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.EnumTypeHandler" javaType="com.heliant.formservice.domain.Field" />
+    </typeHandlers>
+
+    <mappers>
+        <mapper resource="com.heliant.formservice.dao.FormMapper.xml" />
+        <mapper resource="com.heliant.formservice.dao.FormCompletedMapper.xml" />
+        <mapper resource="com.heliant.formservice.dao.FieldMapper.xml" />
+    </mappers>
+
+</configuration>

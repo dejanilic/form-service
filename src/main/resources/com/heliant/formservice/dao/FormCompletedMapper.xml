@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heliant.formservice.dao.FormCompletedMapper">
+
+    <resultMap type="FormCompleted" id="formcompleted">
+        <result property="id" column="id" />
+        <result property="formId" column="form_id" />
+        <result property="createdOn" column="createdOn" />
+        <result property="modifiedOn" column="modifiedOn" />
+    </resultMap>
+
+    <select id="getAllFormsCompleted" resultMap="formcompleted">
+        select * from formscompleted;
+    </select>
+
+</mapper>
