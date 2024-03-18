@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
@@ -71,7 +72,7 @@ public class FormController {
     }
 
     @PutMapping("forms")
-    public ResponseEntity<FormResponse> updateForm(@RequestBody Form form) {
+    public ResponseEntity<FormResponse> updateForm(@Valid @RequestBody Form form) {
         Boolean updated = formService.updateForm(form);
 
         FormResponse response = FormResponse.builder()

@@ -14,4 +14,19 @@
         select * from users where username = #{username};
     </select>
 
+    <insert id="createUserWithId">
+        insert into users
+        values (
+        #{id},
+        #{username},
+        #{password},
+        #{createdOn},
+        #{modifiedOn}
+        )
+    </insert>
+
+    <delete id = "deleteById" parameterType = "int">
+        delete from users where id = #{id};
+    </delete>
+
 </mapper>
