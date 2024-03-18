@@ -19,6 +19,8 @@
         <mapper resource="com.heliant.formservice.dao.FormMapper.xml" />
         <mapper resource="com.heliant.formservice.dao.FormCompletedMapper.xml" />
         <mapper resource="com.heliant.formservice.dao.FieldMapper.xml" />
+        <mapper resource="com.heliant.formservice.dao.FieldCompletedMapper.xml" />
+        <mapper resource="com.heliant.formservice.dao.UserMapper.xml" />
     </mappers>
 
 </configuration>
