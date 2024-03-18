@@ -9,8 +9,34 @@
         <result property="modifiedOn" column="modifiedOn" />
     </resultMap>
 
+    <select id="getById" resultMap="form">
+        select * from forms where id = #{formId};
+    </select>
+
     <select id="getAllForms" resultMap="form">
         select * from forms;
     </select>
+
+    <insert id="createForm">
+        insert into forms
+        values (
+            #{id},
+            #{title},
+            #{createdOn},
+            #{modifiedOn}
+        )
+    </insert>
+
+    <update id="updateForm">
+        update forms set
+        title = #{title},
+        createdOn = #{createdOn},
+        modifiedOn = #{modifiedOn}
+        where id = #{id}
+    </update>
+
+    <delete id = "deleteById" parameterType = "int">
+        delete from forms where id = #{formId};
+    </delete>
 
 </mapper>

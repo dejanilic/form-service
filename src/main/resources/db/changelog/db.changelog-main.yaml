@@ -106,3 +106,14 @@ databaseChangeLog:
             formsCompletedNumber int,
             primary key (id)
           );
+
+  - changeSet:
+      id: insert-users
+      author: dejan.ilic@mozzartbet.com
+      changes:
+        - sql:
+            endDelimiter: ;
+            sql: >-
+              insert into users values (1, "root", "$2a$12$3XqKwhrglbxdkAxA/lT90OhjNdeSDovSvs7e8EK2cHNGO2Tg9/5AG", NOW(), NOW());
+              insert into users values (2, "john", "$2a$12$FqXjXkWwG..1GlzWZacxTO8uQlaMVT7QIKgyWYEim6yWe8ZV/FIfe", NOW(), NOW());
+              insert into users values (3, "mark", "$2a$12$oxQHeM8iuJrDcoWP7Ls7b.lBhm0oDcHRGal9icm36ZW4zR.CvKZcm", NOW(), NOW());
