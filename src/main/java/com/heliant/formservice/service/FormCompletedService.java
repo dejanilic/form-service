@@ -8,4 +8,6 @@ public interface FormCompletedService {
 
     List<FormCompleted> getAllFormsCompleted();
 
+    int getFormsCompletedCountForPreviousDay();
+
 }

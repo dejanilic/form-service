@@ -13,4 +13,8 @@
         select * from formscompleted;
     </select>
 
+    <select id="getFormsCompletedCountForPreviousDay" resultType="int">
+        select count(*) from formscompleted where createdOn >= now() - INTERVAL 1 DAY;
+    </select>
+
 </mapper>

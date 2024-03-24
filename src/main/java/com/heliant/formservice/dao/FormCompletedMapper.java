@@ -10,4 +10,5 @@ public interface FormCompletedMapper {
 
     List<FormCompleted> getAllFormsCompleted();
 
+    int getFormsCompletedCountForPreviousDay();
 }

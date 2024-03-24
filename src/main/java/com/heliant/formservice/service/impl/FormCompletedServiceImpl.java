@@ -21,4 +21,9 @@ public class FormCompletedServiceImpl implements FormCompletedService {
         return formCompletedMapper.getAllFormsCompleted();
     }
 
+    @Override
+    public int getFormsCompletedCountForPreviousDay() {
+        return formCompletedMapper.getFormsCompletedCountForPreviousDay();
+    }
+
 }

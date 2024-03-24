@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heliant.formservice.dao.StatisticMapper">
+
+    <resultMap type="Statistic" id="statistic">
+        <result property="id" column="id" />
+        <result property="date" column="date" />
+        <result property="formsCompletedNumber" column="formsCompletedNumber" />
+    </resultMap>
+
+    <insert id="createStatistic" parameterType="Statistic" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into statistics (id, date, formsCompletedNumber)
+        values (id, now(), #{formsCompletedNumber});
+    </insert>
+
+</mapper>
